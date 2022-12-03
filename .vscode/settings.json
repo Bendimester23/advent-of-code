@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.wasm": "wasm",
+        "*.tcc": "cpp",
+        "iostream": "cpp"
+    }
+}

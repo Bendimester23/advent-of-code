@@ -1,0 +1,6 @@
+node_modules/
+**/solution
+package.json
+package-lock.json
+**/input.txt
+**/input-demo.txt
