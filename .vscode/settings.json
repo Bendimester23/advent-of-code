@@ -2,6 +2,9 @@
     "files.associations": {
         "*.wasm": "wasm",
         "*.tcc": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "ostream": "cpp"
     }
 }
