@@ -11,18 +11,6 @@ bool allDifferent(char a, char b, char c, char d)
     return a != b && a != c && a != d && b != c && b != d && c != d;
 }
 
-bool allDifferent(vector<char> all)
-{
-    set<char> thing;
-    for (auto &e : all)
-    {
-        if (!(thing.insert(e).second))
-            return false;
-    }
-
-    return true;
-}
-
 int main()
 {
     ifstream f("./input.txt");
@@ -44,12 +32,18 @@ int main()
 
     for (size_t i = 13; i < l.size(); i++)
     {
-        vector<char> toCheck;
+        set<char> toCheck;
+        bool same = true;
         for (size_t k = 0; k < 14; k++)
         {
-            toCheck.emplace_back(l[i-k]);
+            if (!(toCheck.insert(l[i - k]).second))
+            {
+                same = false;
+                break;
+            }
         }
-        if (allDifferent(toCheck)) {
+        if (same)
+        {
             cout << "Part 2: " << i + 1 << endl;
             break;
         }

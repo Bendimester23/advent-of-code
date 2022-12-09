@@ -8,6 +8,8 @@
         "ostream": "cpp",
         "numbers": "cpp",
         "iosfwd": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "vector": "cpp",
+        "unordered_set": "cpp"
     }
 }
