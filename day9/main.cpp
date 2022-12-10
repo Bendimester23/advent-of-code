@@ -140,7 +140,6 @@ int main()
         parts[i] = Vector2{0, 0};
     }
     
-
     for (const auto &e : lines)
     {
         char dir = e[0];

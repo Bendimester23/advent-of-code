@@ -32,27 +32,23 @@ function getScoreForWinning(me: string, opponent: string) {
 }
 
 function getMoveBasedOnOutcome(opponent: string, outcome: string) {
-    if (outcome == 'Y') {
-        return {
+    return ({
+        'Y': {
             A: 'X',
             B: 'Y',
             C: 'Z'
-        }[opponent]
-    }
-
-    if (outcome == 'X') {
-        return {
+        },
+        'X': {
             A: 'Z',
             B: 'X',
             C: 'Y'
-        }[opponent]
-    }
-
-    return {
-        A: 'Y',
-        B: 'Z',
-        C: 'X'
-    }[opponent]
+        },
+        'Z': {
+            A: 'Y',
+            B: 'Z',
+            C: 'X'
+        }
+    }[outcome] || {})[opponent];
 }
 
 const input = readFileSync(`input.txt`).toString('utf8').split(`\n`).map(e => {
