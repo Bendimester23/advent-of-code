@@ -57,7 +57,6 @@ int main() {
                     -1,
                 };
                 searchRects.emplace_back(rect);
-                cout << "Found number: " << buf.data() << endl;
                 k += idx;
             } else {
                 k++;
